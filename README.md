@@ -17,7 +17,7 @@ We optimized the DLL by adding a secondary pointer (`skipPointer`) to specific n
 | **Insertion Time** | O(1) | O(n) (Pointer Rebuild) |
 | **Ideal Use Case** | Small Data | **Media Players & large lists** |
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** HTML5, CSS3 (Spotify Theme)
 - **Logic:** Vanilla JavaScript (ES6 Classes)
 - **Data Structure:** Custom `SongNode` and `Playlist` classes.
@@ -28,7 +28,7 @@ We optimized the DLL by adding a secondary pointer (`skipPointer`) to specific n
 - `js/dsa/Playlist.js` - Contains the **O(√n)** logic and `jumpToIndex` algorithm.
 - `js/main.js` - Handles UI events and DOM manipulation.
 
-## 🧪 How to Test the Optimization
+## How to Test the Optimization
 1. Open the project in a browser.
 2. Add 16 songs (or use the default load).
 3. The system calculates `k = √16 = 4`.
@@ -36,7 +36,7 @@ We optimized the DLL by adding a secondary pointer (`skipPointer`) to specific n
 5. Enter index `13` and click **Jump to Index**.
 6. Check the **Operation Log** at the bottom to see the algorithm take "Express Jumps" instead of single steps.
 
-## 👨‍💻 Team
+## Team
 - Anaya Singh
 - Sanjith Venkat
 - Sudiksha Kathuria
