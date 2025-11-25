@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Music Player - Optimized Skip Logic</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>🎵 DSA Player</h1>
+        
+        <div>
+            <h2>Add Music</h2>
+            <input type="text" id="inputTitle" placeholder="Song Title" style="margin-bottom: 8px;">
+            <input type="text" id="inputArtist" placeholder="Artist Name" style="margin-bottom: 8px;">
+            <button onclick="uiAddSong()">+ Add to Playlist</button>
+        </div>
+
+        <div style="border-top: 1px solid #333; padding-top: 20px;">
+            <h2>Controls</h2>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                <button class="secondary" onclick="uiSkip(-1)">⏮ Prev</button>
+                <button class="secondary" onclick="uiSkip(1)">Next ⏭</button>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #333; padding-top: 20px;">
+            <h2>Express Skip</h2>
+            <p style="font-size: 12px; color: #888; margin-bottom: 10px;">
+                Uses O(√n) Logic (faster)
+            </p>
+            <input type="number" id="inputIndex" placeholder="Target Index (e.g. 9)" style="margin-bottom: 8px;">
+            <button onclick="uiJumpToIndex()">🚀 Jump to Index</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="stats-bar">
+            <span id="statN">Total Songs (n): 0</span>
+            <span id="statK">Skip Interval (k = √n): 0</span>
+        </div>
+
+        <div class="playlist-container" id="playlistVisualizer">
+            </div>
+
+        <h3>Operation Log</h3>
+        <div class="log-console" id="logConsole">
+            </div>
+    </div>
+
+    <script src="js/dsa/SongNode.js"></script>
+    <script src="js/dsa/Playlist.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
