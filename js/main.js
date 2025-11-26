@@ -31,7 +31,7 @@ function renderPlaylist() {
             <div class="song-title">${current.title}</div>
             <div class="song-artist">${current.artist}</div>
             ${isActive ? '<div style="color:#1DB954; font-size:10px; margin-top:5px;">🔊 NOW PLAYING</div>' : ''}
-            ${hasSkip ? `<div class="skip-badge">🚀 Express Lane -> #${skipTargetIdx}</div>` : ''}
+            ${hasSkip ? `<div class="skip-badge">Express Lane -> #${skipTargetIdx}</div>` : ''}
         `;
         container.appendChild(div);
 

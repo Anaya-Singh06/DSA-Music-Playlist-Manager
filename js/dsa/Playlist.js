@@ -76,17 +76,17 @@ class Playlist {
             if (current.skipPointer && (currentIndex + this.k <= targetAbsIndex)) {
                 current = current.skipPointer;
                 currentIndex += this.k;
-                this.log(`🚀 EXPRESS JUMP! Advanced to #${currentIndex} (${current.title})`);
+                this.log(`EXPRESS JUMP. Advanced to #${currentIndex} (${current.title})`);
             } else {
                 current = current.next;
                 currentIndex++;
-                this.log(`🚶 Step (local). Advanced to #${currentIndex} (${current.title})`);
+                this.log(`Step (local). Advanced to #${currentIndex} (${current.title})`);
             }
             steps++;
         }
 
         this.currentPlayingNode = current;
-        this.log(`✅ Arrived at "${current.title}" in ${steps} ops.`);
+        this.log(`Arrived at "${current.title}" in ${steps} ops.`);
     }
 
     simpleSkip(k) {
